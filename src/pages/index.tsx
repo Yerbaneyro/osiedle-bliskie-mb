@@ -77,12 +77,14 @@ const SliderWraper = styled.div`
     top: 0px;
     right: 0px;
 
-    width: 646px;
-    height: 508px;
-    border: 10px solid black;
+    width: 645px;
+    height: 507px;
+    border-radius: 15px;
 
     text-align: center;
     font-size: 40px;
+
+    overflow: hidden;
 `;
 
 // markup

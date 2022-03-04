@@ -10,34 +10,41 @@ import "swiper/css/pagination";
 
 import styled from "styled-components";
 
+const ImageContainer = styled.div`
+    position: relative;
+    height: 508px;
+    width: 646px;
+    border-radius: 15px;
+`;
+
 const SwiperSlider = () => {
     const data = useStaticQuery(graphql`
         query MyQuery {
-            allDatoCmsPreviousInvestment {
+            allDatoCmsSlider {
                 nodes {
-                    name
-                    featuredImage {
-                        gatsbyImageData(width: 600)
+                    gallery {
+                        gatsbyImageData(width: 646, height: 508)
+                        alt
                     }
                 }
             }
         }
     `);
 
-    let imagesData = data.allDatoCmsPreviousInvestment.nodes;
-    let images = getImage(data.allDatoCmsPreviousInvestment.nodes);
+    let imagesData = data.allDatoCmsSlider.nodes[0].gallery;
 
     console.log(imagesData);
-    console.log(images);
     return (
         <Swiper modules={[Pagination]}>
             {imagesData.map((e: any) => {
                 return (
                     <SwiperSlide>
-                        <GatsbyImage
-                            image={e.featuredImage.gatsbyImageData}
-                            alt="Slider Image"
-                        />
+                        <ImageContainer>
+                            <GatsbyImage
+                                image={e.gatsbyImageData}
+                                alt={e.alt}
+                            />
+                        </ImageContainer>
                     </SwiperSlide>
                 );
             })}
