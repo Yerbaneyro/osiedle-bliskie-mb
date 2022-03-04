@@ -3,63 +3,83 @@ import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 import GlobalStyle from "../globalStyles";
+import Header from "../components/header";
 
 // styles
-const MenuBar = styled.div`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 128px;
+const Slider = styled.div`
+    width: 1236px;
+    height: 553px;
+    margin-left: 50%;
+    transform: translate(-50%);
 `;
 
-const Navigation = styled.nav`
-    display: flex;
+const SliderHeader = styled.h2`
+    position: relative;
+    top: 107px;
+`;
+const SliderHeaderBold = styled.h2`
+    font-size: 54px;
+    font-weight: 700;
+    margin-left: 6px;
+`;
+const SliderHeaderThin = styled.h2`
+    font-size: 54px;
+    font-weight: 400;
+    margin-left: 53px;
+    background-color: transparent;
 
-    ul {
-        width: 440px;
+    &:before {
+        content: "";
         display: flex;
-        font-size: 18px;
-        list-style: none;
-        justify-content: space-between;
-        cursor: pointer;
+        position: relative;
+        top: 50px;
+        right: 7px;
+        width: 485px;
+        height: 13px;
+        border-radius: 5px;
+        background-color: #9ac259;
+        z-index: -1;
     }
 `;
 
-const ContactButton = styled.button`
-    width: 128px;
-    height: 46px;
-    background-color: #739143;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 20px;
-    color: white;
-    border: none;
-    cursor: pointer;
+const CaptionContainer = styled.div`
+    position: absolute;
+    top: 294px;
+
+    width: 1037px;
+    height: 259px;
+    border-radius: 20px;
+    background-color: #9ac259;
+
+    p {
+        margin: 38px 30px;
+        width: 520px;
+        font-weight: bold;
+        font-size: 32px;
+        color: white;
+    }
 `;
 
 // markup
 const IndexPage = () => {
     return (
         <>
+            <title>Osiedle Bliskie</title>
             <GlobalStyle />
             <body>
-                <MenuBar>
-                    <StaticImage
-                        src="../images/logo1.png"
-                        alt="logo Osiedle Bliskie"
-                        layout="fixed"
-                    />
-                    <Navigation>
-                        <ul>
-                            <li>Start</li>
-                            <li>O osiedlu</li>
-                            <li>Lokalizacja</li>
-                            <li>O nas</li>
-                        </ul>
-                    </Navigation>
-                    <ContactButton>Kontakt</ContactButton>
-                </MenuBar>
-                <title>Home Page</title>
+                <Header />
+                <Slider>
+                    <SliderHeader>
+                        <SliderHeaderBold>Zamieszkaj</SliderHeaderBold>
+                        <SliderHeaderThin>na Osiedlu Bliskie</SliderHeaderThin>
+                    </SliderHeader>
+                    <CaptionContainer>
+                        <p>
+                            Wybierz wygodny dom łączący ekologiczne rozwiązania
+                            <br />i energooszczędne technologie!
+                        </p>
+                    </CaptionContainer>
+                </Slider>
             </body>
         </>
     );
