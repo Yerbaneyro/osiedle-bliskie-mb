@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
         display: block;
         font-family: "Work Sans" ;
 
-        line-height: 1;
+        line-height: 1; 
     }
 
     html, body, div, span, applet, object, iframe,

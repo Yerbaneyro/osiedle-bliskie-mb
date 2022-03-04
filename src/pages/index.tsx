@@ -1,9 +1,8 @@
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-
 import GlobalStyle from "../globalStyles";
 import Header from "../components/header";
+import SwiperSlider from "../components/swiper";
 
 // styles
 const Slider = styled.div`
@@ -44,7 +43,7 @@ const SliderHeaderThin = styled.h2`
 
 const CaptionContainer = styled.div`
     position: absolute;
-    top: 294px;
+    bottom: 0px;
 
     width: 1037px;
     height: 259px;
@@ -58,6 +57,32 @@ const CaptionContainer = styled.div`
         font-size: 32px;
         color: white;
     }
+    button {
+        width: 127px;
+        height: 43px;
+        border: none;
+        margin-left: 30px;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        background-color: #739143;
+        cursor: pointer;
+    }
+`;
+
+const SliderWraper = styled.div`
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    width: 646px;
+    height: 508px;
+    border: 10px solid black;
+
+    text-align: center;
+    font-size: 40px;
 `;
 
 // markup
@@ -78,7 +103,11 @@ const IndexPage = () => {
                             Wybierz wygodny dom łączący ekologiczne rozwiązania
                             <br />i energooszczędne technologie!
                         </p>
+                        <button>Sprawdź</button>
                     </CaptionContainer>
+                    <SliderWraper>
+                        <SwiperSlider />
+                    </SliderWraper>
                 </Slider>
             </body>
         </>

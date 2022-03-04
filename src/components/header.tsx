@@ -2,11 +2,17 @@ import * as React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 
+const HeaderContainer = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
 const MenuBar = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 128px;
+    width: 1300px;
 `;
 
 const Navigation = styled.nav`
@@ -36,22 +42,24 @@ const ContactButton = styled.button`
 
 const Header = () => {
     return (
-        <MenuBar>
-            <StaticImage
-                src="../images/logo1.png"
-                alt="logo Osiedle Bliskie"
-                layout="fixed"
-            />
-            <Navigation>
-                <ul>
-                    <li>Start</li>
-                    <li>O osiedlu</li>
-                    <li>Lokalizacja</li>
-                    <li>O nas</li>
-                </ul>
-            </Navigation>
-            <ContactButton>Kontakt</ContactButton>
-        </MenuBar>
+        <HeaderContainer>
+            <MenuBar>
+                <StaticImage
+                    src="../images/logo1.png"
+                    alt="logo Osiedle Bliskie"
+                    layout="fixed"
+                />
+                <Navigation>
+                    <ul>
+                        <li>Start</li>
+                        <li>O osiedlu</li>
+                        <li>Lokalizacja</li>
+                        <li>O nas</li>
+                    </ul>
+                </Navigation>
+                <ContactButton>Kontakt</ContactButton>
+            </MenuBar>
+        </HeaderContainer>
     );
 };
 
