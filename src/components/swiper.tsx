@@ -23,7 +23,7 @@ const SwiperSlider = () => {
             allDatoCmsSlider {
                 nodes {
                     gallery {
-                        gatsbyImageData(width: 646, height: 508)
+                        gatsbyImageData(width: 1000, height: 1000)
                         alt
                     }
                 }
@@ -43,6 +43,8 @@ const SwiperSlider = () => {
                             <GatsbyImage
                                 image={e.gatsbyImageData}
                                 alt={e.alt}
+                                objectFit={"cover"}
+                                objectPosition={"0px -140px"}
                             />
                         </ImageContainer>
                     </SwiperSlide>
