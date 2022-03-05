@@ -3,6 +3,10 @@ import * as React from "react";
 import styled from "styled-components";
 import SwiperSlider from "../components/swiper";
 
+interface Query {
+    data: any;
+}
+
 // styles
 const Slider = styled.div`
     width: 1236px;
@@ -86,7 +90,7 @@ const SliderWraper = styled.div`
     overflow: hidden;
 `;
 
-const SliderSection = () => {
+const SliderSection = ({ data }: Query) => {
     return (
         <Slider>
             <SliderHeader>
@@ -101,10 +105,10 @@ const SliderSection = () => {
                 <button>Sprawdź</button>
             </CaptionContainer>
             <SliderWraper>
-                <SwiperSlider />
+                <SwiperSlider data={data} />
             </SliderWraper>
         </Slider>
     );
 };
 
-export default SliderSection;
+export { SliderSection, Query };

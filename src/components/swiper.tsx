@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import styled from "styled-components";
+import { Query } from "./slider";
 
 const ImageContainer = styled.div`
     position: relative;
@@ -17,20 +18,7 @@ const ImageContainer = styled.div`
     border-radius: 15px;
 `;
 
-const SwiperSlider = () => {
-    const data = useStaticQuery(graphql`
-        query MyQuery {
-            allDatoCmsSlider {
-                nodes {
-                    gallery {
-                        gatsbyImageData(width: 1000, height: 1000)
-                        alt
-                    }
-                }
-            }
-        }
-    `);
-
+const SwiperSlider = ({ data }: Query) => {
     let imagesData = data.allDatoCmsSlider.nodes[0].gallery;
 
     console.log(imagesData);
