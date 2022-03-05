@@ -6,6 +6,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import Header from "../components/header";
 import SliderSection from "../components/slider";
 import Icons from "../components/icons";
+import Area from "../components/area";
 
 //styled-components
 
@@ -19,6 +20,7 @@ const IndexPage = () => {
                 <Header />
                 <SliderSection />
                 <Icons />
+                <Area />
             </body>
         </>
     );
