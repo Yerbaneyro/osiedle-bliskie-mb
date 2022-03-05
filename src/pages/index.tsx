@@ -3,10 +3,13 @@ import styled from "styled-components";
 import GlobalStyle from "../globalStyles";
 import { StaticImage } from "gatsby-plugin-image";
 
+import "mapbox-gl/dist/mapbox-gl.css";
+
 import Header from "../components/header";
 import SliderSection from "../components/slider";
 import Icons from "../components/icons";
 import Area from "../components/area";
+import Localisation from "../components/localisation";
 
 //styled-components
 
@@ -21,6 +24,7 @@ const IndexPage = () => {
                 <SliderSection />
                 <Icons />
                 <Area />
+                <Localisation />
             </body>
         </>
     );
