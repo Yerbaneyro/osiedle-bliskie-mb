@@ -23,6 +23,21 @@ const LocalisationContainer = styled.div`
         font-size: 43px;
         color: #2a4819;
     }
+    @media (max-width: 1024px) {
+        width: 1024px;
+        height: 880px;
+        margin-top: 30px;
+
+        h2 {
+            top: 0px;
+            left: 0px;
+            margin-left: 50%;
+            transform: translate(-50%);
+        }
+    }
+    @media (max-width: 428px) {
+        height: 750px;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -41,6 +56,28 @@ const TextContainer = styled.div`
         font-size: 18px;
         line-height: 21px;
     }
+
+    @media (max-width: 1024px) {
+        top: 60px;
+        max-width: 630px;
+        height: 235px;
+        margin-left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+
+        p {
+            margin: 40px 20px;
+            max-width: 604px;
+        }
+    }
+    @media (max-width: 428px) {
+        max-width: 340px;
+        height: 500px;
+
+        p {
+            width: 300px;
+        }
+    }
 `;
 
 const MapWraper = styled.div`
@@ -51,6 +88,18 @@ const MapWraper = styled.div`
     border-bottom-right-radius: 15px;
     overflow: hidden;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
+    @media (max-width: 1024px) {
+        position: relative;
+        top: 320px;
+        margin-left: 50%;
+        transform: translate(-50%);
+        border-radius: 15px;
+    }
+    @media (max-width: 428px) {
+        width: 360px;
+        height: 360px;
+        top: 450px;
+    }
 `;
 
 const Localisation = ({ id }: Navigation) => {

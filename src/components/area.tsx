@@ -9,12 +9,28 @@ const AreaContainer = styled.div`
     margin-top: 113px;
     margin-left: 50%;
     transform: translate(-50%);
+
+    @media (max-width: 428px) {
+        height: 800px;
+        margin-top: 30px;
+    }
 `;
 
 const ImageWraper = styled.div`
     width: 950px;
     border-radius: 15px;
     overflow: hidden;
+
+    @media (max-width: 1024px) {
+        position: absolute;
+        bottom: 70px;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+    @media (max-width: 428px) {
+        width: 428px;
+        bottom: 50px;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -45,6 +61,27 @@ const TextContainer = styled.div`
         margin-right: 41px;
         font-size: 18px;
         line-height: 21px;
+    }
+    @media (max-width: 1024px) {
+        position: inherit;
+        margin-left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+        height: 320px;
+
+        h2 {
+            position: inherit;
+            padding-top: 20px;
+        }
+
+        p {
+            position: inherit;
+            margin: 30px 20px;
+        }
+    }
+    @media (max-width: 428px) {
+        width: 350px;
+        height: 500px;
     }
 `;
 

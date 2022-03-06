@@ -11,14 +11,12 @@ const IconsContainer = styled.div`
     max-width: 780px;
     margin-left: 50%;
     transform: translate(-50%);
-
     div {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: 10px;
+        margin: 10px auto;
         width: 180px;
-
         p {
             text-align: center;
             margin-top: 30px;
@@ -27,6 +25,9 @@ const IconsContainer = styled.div`
             color: #2a4819;
             white-space: pre-wrap;
         }
+    }
+    @media (max-width: 428px) {
+        margin-top: 10px;
     }
 `;
 
@@ -39,12 +40,12 @@ const Icons = () => {
                     alt="Znakomita Lokalizacja Image"
                     layout="fixed"
                 />
-                <p>Znakomita Lokalizacja</p>
+                <p>Znakomita lokalizacja</p>
             </div>
             <div>
                 <StaticImage
                     src="../images/warstwa4.png"
-                    alt="Znakomita Lokalizacja Image"
+                    alt="Wygodna PrzestrzeńImage"
                     layout="fixed"
                 />
                 <p>Wygodna Przestrzeń</p>
@@ -52,7 +53,7 @@ const Icons = () => {
             <div>
                 <StaticImage
                     src="../images/warstwa3.png"
-                    alt="Znakomita Lokalizacja Image"
+                    alt="Wygoda i oszczędność Image"
                     layout="fixed"
                 />
                 <p>{`Wygoda \n i oszczędność`}</p>

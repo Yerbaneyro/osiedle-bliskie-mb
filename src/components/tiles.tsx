@@ -2,17 +2,21 @@ import * as React from "react";
 import styled from "styled-components";
 
 import { GatsbyImage } from "gatsby-plugin-image";
-import { Query } from "./slider";
+import { Query } from "../../types";
 
 //styled-components
 const TilesContainer = styled.div`
     display: flex;
+    justify-content: center;
+`;
+
+const TilesWrapper = styled.div`
+    display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 1274px;
-    height: 424px;
+    min-height: 424px;
     margin-top: 178px;
-    margin-left: 50%;
-    transform: translate(-50%);
 
     h3 {
         position: absolute;
@@ -27,8 +31,10 @@ const TilesContainer = styled.div`
 
 const TileWraper = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 20px auto;
     width: 399px;
     height: 399px;
     border-radius: 15px;
@@ -40,26 +46,32 @@ const TileWraper = styled.div`
         height: 399px;
         opacity: 0.5;
     }
+    @media (max-width: 428px) {
+        width: 340px;
+        height: 340px;
+    }
 `;
 
 const Tiles = ({ data }: Query) => {
     let tilesData = data.allDatoCmsPreviousInvestment.nodes;
     return (
         <TilesContainer>
-            {tilesData.map((e: any) => {
-                return (
-                    <TileWraper>
-                        <div>
-                            <GatsbyImage
-                                image={e.featuredImage.gatsbyImageData}
-                                alt={e.featuredImage.alt}
-                                objectFit={"cover"}
-                            />
-                        </div>
-                        <h3>{e.name}</h3>
-                    </TileWraper>
-                );
-            })}
+            <TilesWrapper>
+                {tilesData.map((e: any) => {
+                    return (
+                        <TileWraper>
+                            <div>
+                                <GatsbyImage
+                                    image={e.featuredImage.gatsbyImageData}
+                                    alt={e.featuredImage.alt}
+                                    objectFit={"cover"}
+                                />
+                            </div>
+                            <h3>{e.name}</h3>
+                        </TileWraper>
+                    );
+                })}
+            </TilesWrapper>
         </TilesContainer>
     );
 };

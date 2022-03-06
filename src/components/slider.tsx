@@ -11,16 +11,38 @@ const Slider = styled.div`
     height: 553px;
     margin-left: 50%;
     transform: translate(-50%);
+
+    @media (max-width: 1024px) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 1024px;
+        height: 850px;
+    }
+    @media (max-width: 428px) {
+        height: 700px;
+    }
 `;
 
 const SliderHeader = styled.h2`
     position: relative;
     top: 107px;
+    @media (max-width: 1024px) {
+        position: inherit;
+        top: 0;
+    }
 `;
 const SliderHeaderBold = styled.h2`
     font-size: 54px;
-    font-weight: 700;
+    font-weight: 700 !important;
     margin-left: 6px;
+    @media (max-width: 428px) {
+        font-size: 34px;
+        text-align: center;
+        position: relative;
+        right: 70px;
+        top: 10px;
+    }
 `;
 const SliderHeaderThin = styled.h2`
     font-size: 54px;
@@ -39,6 +61,18 @@ const SliderHeaderThin = styled.h2`
         border-radius: 5px;
         background-color: #9ac259;
         z-index: -1;
+    }
+    @media (max-width: 428px) {
+        font-size: 34px;
+        text-align: center;
+        position: relative;
+        right: 20px;
+
+        &:before {
+            width: 310px;
+            left: 0px;
+            top: 36px;
+        }
     }
 `;
 
@@ -75,6 +109,29 @@ const CaptionContainer = styled.div`
         background-color: #739143;
         cursor: pointer;
     }
+    @media (max-width: 1024px) {
+        position: inherit;
+        top: 0;
+        background-color: #ffffff;
+
+        p {
+            margin-left: 50%;
+            transform: translate(-50%);
+            text-align: center;
+            color: black;
+        }
+
+        button {
+            margin-left: 50%;
+            transform: translate(-50%);
+        }
+    }
+    @media (max-width: 428px) {
+        p {
+            font-size: 20px;
+            width: 340px;
+        }
+    }
 `;
 
 const SliderWraper = styled.div`
@@ -86,6 +143,13 @@ const SliderWraper = styled.div`
 
     text-align: center;
     font-size: 40px;
+
+    @media (max-width: 1024px) {
+        position: relative;
+    }
+    @media (max-width: 428px) {
+        width: 370px;
+    }
 `;
 
 const SliderSection = ({ data }: Query) => {

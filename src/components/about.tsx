@@ -11,6 +11,12 @@ const AboutContainer = styled.div`
     margin-top: 149px;
     margin-left: 50%;
     transform: translate(-50%);
+    @media (max-width: 1024px) {
+        width: 1024px;
+    }
+    @media (max-width: 428px) {
+        height: 500px;
+    }
 `;
 
 const ImageWraper = styled.div`
@@ -42,6 +48,18 @@ const AboutText = styled.div`
         font-size: 18px;
         line-height: 21px;
         white-space: pre-wrap;
+    }
+    @media (max-width: 1024px) {
+        width: 600px;
+        height: 400px;
+    }
+    @media (max-width: 428px) {
+        width: 340px;
+        height: 510px;
+
+        p {
+            margin: 25px 20px;
+        }
     }
 `;
 

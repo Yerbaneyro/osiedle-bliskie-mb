@@ -1,5 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import "@fontsource/work-sans";
+import "@fontsource/work-sans/500.css";
+import "@fontsource/work-sans/600.css";
+import "@fontsource/work-sans/700.css";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -18,9 +21,6 @@ const GlobalStyle = createGlobalStyle`
         
         background-color: #739143 !important;
     }
-
-
-    
 
     body {
         display: block;
@@ -43,32 +43,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     vertical-align: baseline;
-    }
-
-
-    input, select {
-        vertical-align:middle;
-    }
-
-
-    table {
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
-
-    .bold {
-        font-weight: bold;
-    }
-
-    .floatLeft {
-        float: left;
-    }
-    .floatRight {
-        float: right;
-    }
-
-    .clear {
-        clear: both;
     }
 `;
 
