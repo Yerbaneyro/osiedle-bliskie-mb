@@ -121,12 +121,6 @@ const styles = {
 };
 
 const Header = ({ id }: Navigation) => {
-    const [openMenu, setOpenMenu] = useState<boolean>(false);
-
-    useEffect(() => {
-        console.log(openMenu);
-    }, [openMenu]);
-
     return (
         <HeaderContainer id={id}>
             <MenuBar>
@@ -154,7 +148,7 @@ const Header = ({ id }: Navigation) => {
                     layout="fixed"
                 />
 
-                <Menu right styles={styles} isOpen={openMenu}>
+                <Menu right styles={styles}>
                     <NavigationWrapper>
                         <ul>
                             <li onClick={() => scrollTo("#start")}>Start</li>
@@ -162,7 +156,6 @@ const Header = ({ id }: Navigation) => {
                             <li
                                 onClick={() => {
                                     scrollTo("#localisation");
-                                    setOpenMenu(!true);
                                 }}
                             >
                                 Lokalizacja

@@ -133,7 +133,7 @@ const Localisation = ({ id }: Navigation) => {
                     initialViewState={{
                         longitude: 17.5084302,
                         latitude: 51.9509421,
-                        zoom: 14,
+                        zoom: 12,
                     }}
                     style={{ width: 655, height: 655 }}
                     mapStyle="mapbox://styles/mapbox/streets-v9"

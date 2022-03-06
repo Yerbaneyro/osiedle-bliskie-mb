@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, Layout } from "gatsby-plugin-image";
 import { Query } from "../../types";
 
 //styled-components
@@ -57,20 +57,33 @@ const Tiles = ({ data }: Query) => {
     return (
         <TilesContainer>
             <TilesWrapper>
-                {tilesData.map((e: any) => {
-                    return (
-                        <TileWraper>
-                            <div>
-                                <GatsbyImage
-                                    image={e.featuredImage.gatsbyImageData}
-                                    alt={e.featuredImage.alt}
-                                    objectFit={"cover"}
-                                />
-                            </div>
-                            <h3>{e.name}</h3>
-                        </TileWraper>
-                    );
-                })}
+                {tilesData.map(
+                    (e: {
+                        name: string;
+                        featuredImage: {
+                            alt: string;
+                            gatsbyImageData: {
+                                layout: Layout;
+                                width: number;
+                                height: number;
+                                images: object;
+                            };
+                        };
+                    }) => {
+                        return (
+                            <TileWraper>
+                                <div>
+                                    <GatsbyImage
+                                        image={e.featuredImage.gatsbyImageData}
+                                        alt={e.featuredImage.alt}
+                                        objectFit={"cover"}
+                                    />
+                                </div>
+                                <h3>{e.name}</h3>
+                            </TileWraper>
+                        );
+                    }
+                )}
             </TilesWrapper>
         </TilesContainer>
     );

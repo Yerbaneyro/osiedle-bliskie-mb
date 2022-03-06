@@ -1,6 +1,6 @@
 import React from "react";
 
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, Layout } from "gatsby-plugin-image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
 
@@ -13,7 +13,6 @@ import { Query } from "../../types";
 const SwiperSlider = ({ data }: Query) => {
     let imagesData = data.allDatoCmsSlider.nodes[0].gallery;
 
-    console.log(imagesData);
     return (
         <Swiper
             modules={[Autoplay, Pagination]}
@@ -25,18 +24,28 @@ const SwiperSlider = ({ data }: Query) => {
                 clickable: true,
             }}
         >
-            {imagesData.map((e: any) => {
-                return (
-                    <SwiperSlide>
-                        <GatsbyImage
-                            image={e.gatsbyImageData}
-                            alt={e.alt}
-                            style={{ borderRadius: 15 }}
-                            objectFit={"cover"}
-                        />
-                    </SwiperSlide>
-                );
-            })}
+            {imagesData.map(
+                (e: {
+                    gatsbyImageData: {
+                        layout: Layout;
+                        width: number;
+                        height: number;
+                        images: object;
+                    };
+                    alt: string;
+                }) => {
+                    return (
+                        <SwiperSlide>
+                            <GatsbyImage
+                                image={e.gatsbyImageData}
+                                alt={e.alt}
+                                style={{ borderRadius: 15 }}
+                                objectFit={"cover"}
+                            />
+                        </SwiperSlide>
+                    );
+                }
+            )}
         </Swiper>
     );
 };
