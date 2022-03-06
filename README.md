@@ -1,3 +1,27 @@
+#Osiedle Bliskie - Task
+
+##Tools: 
+
+Gatsby
+TypeScript
+Styled Components
+
+Swiper
+Mapbox  
+Gatsby-plugin-smoothscroll
+React-Burger-Menu
+
+##Bugi i odczucia:
+
+No cóż, na pewno można by to zrobić lepiej,może lepiej otypowac, pewnie struktura plików też mogłaby być inna, no i na pewno mógłbym zmniejszyć ilośc MediaQueries i generalnie kodu do stylowania. Usprawiedliwię się tym, że dopiero zaczynałem zabawę z Sytled Components i musiałem trochę złapać obycia. Z zastosowaniem SASS trochę inaczej podszedłbym do budowania responsywności. Na początku skupiłem się jednak na trochę "sztywnym" postawieniu tego co było na Figmie dla Desktopu. Dla Mobile nic nie było wiec improwizowałem.
+
+Już po wrzuceniu na Gatsby Cloud pojawił się błąd z wyświetlaniem Mapboxa na serwerze. Lokalnie wszystko działało, ale na serwerze wyglądało na jakiś problem z połączeniem z API. Dokopałem się na StackOverflow i wygląda na to że problem jest po stronie Mapbox. Tak czy siak udało mi się zaimplementować rozwiązanie.
+
+Trochę gimnastykowałem się z sliderem tzn. wymiary obrazków z CMS nie pasowały mi do rozmiarów DIV szablonu. Zastosowałem "Cover" trochę próbowałem pobawić się z układem obrazków w slajderze. Ale generalnie w realnym projekcie po prostu zastosowałbym inne obrazki. 
+
+Generalnie spoko zadanie w miarę sprawnie poszło. Teraz bym innaczej do niego podszedł ale myślę, że się udało i generalnie zawsze nowe doświadczenie. Dzięki!
+
+
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
