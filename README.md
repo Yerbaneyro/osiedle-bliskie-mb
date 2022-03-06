@@ -1,6 +1,6 @@
-#Osiedle Bliskie - Task
+# Osiedle Bliskie - Task
 
-##Tools: 
+## Tools: 
 
 Gatsby
 TypeScript
@@ -11,7 +11,7 @@ Mapbox
 Gatsby-plugin-smoothscroll
 React-Burger-Menu
 
-##Bugi i odczucia:
+## Bugi i odczucia:
 
 No cóż, na pewno można by to zrobić lepiej,może lepiej otypowac, pewnie struktura plików też mogłaby być inna, no i na pewno mógłbym zmniejszyć ilośc MediaQueries i generalnie kodu do stylowania. Usprawiedliwię się tym, że dopiero zaczynałem zabawę z Sytled Components i musiałem trochę złapać obycia. Z zastosowaniem SASS trochę inaczej podszedłbym do budowania responsywności. Na początku skupiłem się jednak na trochę "sztywnym" postawieniu tego co było na Figmie dla Desktopu. Dla Mobile nic nie było wiec improwizowałem.
 
