@@ -20,6 +20,7 @@ const Slider = styled.div`
         height: 850px;
     }
     @media (max-width: 428px) {
+        width: 428px;
         height: 700px;
     }
 `;

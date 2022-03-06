@@ -37,6 +37,7 @@ const LocalisationContainer = styled.div`
     }
     @media (max-width: 428px) {
         height: 750px;
+        width: 428px;
     }
 `;
 

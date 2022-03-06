@@ -15,7 +15,7 @@ const AboutContainer = styled.div`
         width: 1024px;
     }
     @media (max-width: 428px) {
-        height: 500px;
+        width: 328px;
     }
 `;
 
@@ -56,6 +56,7 @@ const AboutText = styled.div`
     @media (max-width: 428px) {
         width: 340px;
         height: 510px;
+        top: 60px;
 
         p {
             margin: 25px 20px;

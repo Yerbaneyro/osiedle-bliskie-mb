@@ -11,6 +11,7 @@ const AreaContainer = styled.div`
     transform: translate(-50%);
 
     @media (max-width: 428px) {
+        width: 428px;
         height: 800px;
         margin-top: 30px;
     }
@@ -28,7 +29,7 @@ const ImageWraper = styled.div`
         transform: translate(-50%);
     }
     @media (max-width: 428px) {
-        width: 428px;
+        width: 300px;
         bottom: 50px;
     }
 `;
