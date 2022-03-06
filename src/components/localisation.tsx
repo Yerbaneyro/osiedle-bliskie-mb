@@ -24,7 +24,7 @@ const LocalisationContainer = styled.div`
         color: #2a4819;
     }
     @media (max-width: 1024px) {
-        width: 1024px;
+        max-width: 534px;
         height: 880px;
         margin-top: 30px;
 
@@ -72,7 +72,7 @@ const TextContainer = styled.div`
         }
     }
     @media (max-width: 428px) {
-        max-width: 340px;
+        max-width: 350px;
         height: 500px;
 
         p {
@@ -97,9 +97,10 @@ const MapWraper = styled.div`
         border-radius: 15px;
     }
     @media (max-width: 428px) {
-        width: 360px;
-        height: 360px;
+        width: 330px;
+        height: 330px;
         top: 450px;
+        border: 10px solid #9ac259;
     }
 `;
 

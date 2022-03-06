@@ -16,7 +16,7 @@ const Slider = styled.div`
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        width: 1024px;
+        max-width: 534px;
         height: 850px;
     }
     @media (max-width: 428px) {

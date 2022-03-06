@@ -10,6 +10,10 @@ const AreaContainer = styled.div`
     margin-left: 50%;
     transform: translate(-50%);
 
+    @media (max-width: 1024px) {
+        max-width: 534px;
+    }
+
     @media (max-width: 428px) {
         width: 428px;
         height: 800px;
@@ -24,12 +28,13 @@ const ImageWraper = styled.div`
 
     @media (max-width: 1024px) {
         position: absolute;
-        bottom: 70px;
+        width: 560px;
+        bottom: 0px;
         margin-left: 50%;
         transform: translate(-50%);
     }
     @media (max-width: 428px) {
-        width: 300px;
+        width: 350px;
         bottom: 50px;
     }
 `;
@@ -44,7 +49,10 @@ const TextContainer = styled.div`
 
     background: #739143;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 
     h2 {
         position: absolute;
@@ -69,6 +77,8 @@ const TextContainer = styled.div`
         transform: translate(-50%);
         text-align: center;
         height: 320px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
 
         h2 {
             position: inherit;

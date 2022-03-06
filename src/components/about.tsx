@@ -12,10 +12,10 @@ const AboutContainer = styled.div`
     margin-left: 50%;
     transform: translate(-50%);
     @media (max-width: 1024px) {
-        width: 1024px;
+        max-width: 534px;
     }
     @media (max-width: 428px) {
-        width: 328px;
+        width: 350px;
     }
 `;
 
@@ -33,7 +33,10 @@ const AboutText = styled.div`
     transform: translate(-50%);
     background: #739143;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
-    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     color: white;
     text-align: center;
 
@@ -54,9 +57,11 @@ const AboutText = styled.div`
         height: 400px;
     }
     @media (max-width: 428px) {
-        width: 340px;
+        width: 350px;
         height: 510px;
-        top: 60px;
+        top: 90px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
 
         p {
             margin: 25px 20px;
