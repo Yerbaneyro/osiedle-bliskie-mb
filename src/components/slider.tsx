@@ -3,9 +3,7 @@ import * as React from "react";
 import styled from "styled-components";
 import SwiperSlider from "../components/swiper";
 
-interface Query {
-    data: any;
-}
+import { Query } from "../../types";
 
 // styles
 const Slider = styled.div`
@@ -54,10 +52,14 @@ const CaptionContainer = styled.div`
     background-color: #9ac259;
 
     p {
-        margin: 38px 30px;
+        margin-top: 38px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 19px;
         width: 520px;
         font-weight: bold;
         font-size: 32px;
+        line-height: 38px;
         color: white;
     }
     button {
@@ -81,13 +83,9 @@ const SliderWraper = styled.div`
     right: 0px;
 
     width: 645px;
-    height: 507px;
-    border-radius: 15px;
 
     text-align: center;
     font-size: 40px;
-
-    overflow: hidden;
 `;
 
 const SliderSection = ({ data }: Query) => {
@@ -111,4 +109,4 @@ const SliderSection = ({ data }: Query) => {
     );
 };
 
-export { SliderSection, Query };
+export default SliderSection;

@@ -1,40 +1,39 @@
 import React from "react";
 
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
-import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import { Pagination, Autoplay } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 import styled from "styled-components";
-import { Query } from "./slider";
-
-const ImageContainer = styled.div`
-    position: relative;
-    height: 508px;
-    width: 646px;
-    border-radius: 15px;
-`;
+import { Query } from "../../types";
 
 const SwiperSlider = ({ data }: Query) => {
     let imagesData = data.allDatoCmsSlider.nodes[0].gallery;
 
     console.log(imagesData);
     return (
-        <Swiper modules={[Pagination]}>
+        <Swiper
+            modules={[Autoplay, Pagination]}
+            autoplay={{
+                delay: 7000,
+                disableOnInteraction: false,
+            }}
+            pagination={{
+                clickable: true,
+            }}
+        >
             {imagesData.map((e: any) => {
                 return (
                     <SwiperSlide>
-                        <ImageContainer>
-                            <GatsbyImage
-                                image={e.gatsbyImageData}
-                                alt={e.alt}
-                                objectFit={"cover"}
-                                objectPosition={"0px -140px"}
-                            />
-                        </ImageContainer>
+                        <GatsbyImage
+                            image={e.gatsbyImageData}
+                            alt={e.alt}
+                            style={{ borderRadius: 15 }}
+                            objectFit={"cover"}
+                        />
                     </SwiperSlide>
                 );
             })}

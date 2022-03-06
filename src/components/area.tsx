@@ -48,9 +48,9 @@ const TextContainer = styled.div`
     }
 `;
 
-const Area = () => {
+const Area = ({ id }: any) => {
     return (
-        <AreaContainer>
+        <AreaContainer id={id}>
             <ImageWraper>
                 <StaticImage
                     src="../images/oosiedlu.jpg"

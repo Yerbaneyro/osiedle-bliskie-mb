@@ -5,6 +5,8 @@ import { StaticImage } from "gatsby-plugin-image";
 import Map, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
+import { Navigation } from "../../types";
+
 //styled-components
 const LocalisationContainer = styled.div`
     width: 1274px;
@@ -51,9 +53,9 @@ const MapWraper = styled.div`
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
 `;
 
-const Localisation = () => {
+const Localisation = ({ id }: Navigation) => {
     return (
-        <LocalisationContainer>
+        <LocalisationContainer id={id}>
             <h2>Lokalizacja</h2>
             <TextContainer>
                 <p>

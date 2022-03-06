@@ -2,13 +2,15 @@ import * as React from "react";
 import styled from "styled-components";
 
 import { StaticImage } from "gatsby-plugin-image";
+
 import scrollTo from "gatsby-plugin-smoothscroll";
 
-import { Navigation } from "../../types";
-
-const HeaderContainer = styled.div`
+const FooterContainer = styled.div`
     display: flex;
     justify-content: center;
+    margin-top: 150px;
+    background-color: #2a4819;
+    color: white;
 `;
 
 const MenuBar = styled.div`
@@ -19,12 +21,13 @@ const MenuBar = styled.div`
     width: 1300px;
 `;
 
-const NavigationWrapper = styled.nav`
+const Navigation = styled.nav`
     display: flex;
 
     ul {
         width: 440px;
         display: flex;
+        font-weight: 700;
         font-size: 18px;
         list-style: none;
         justify-content: space-between;
@@ -32,29 +35,16 @@ const NavigationWrapper = styled.nav`
     }
 `;
 
-const ContactButton = styled.button`
-    width: 128px;
-    height: 46px;
-    margin-right: 32px;
-    background-color: #739143;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 20px;
-    color: white;
-    border: none;
-    cursor: pointer;
-`;
-
-const Header = ({ id }: Navigation) => {
+const Footer = () => {
     return (
-        <HeaderContainer id={id}>
+        <FooterContainer>
             <MenuBar>
                 <StaticImage
-                    src="../images/logo1.png"
-                    alt="logo Osiedle Bliskie"
+                    src="../images/logofooter.png"
+                    alt="logo Osiedle Bliskie Footer"
                     layout="fixed"
                 />
-                <NavigationWrapper>
+                <Navigation>
                     <ul>
                         <li onClick={() => scrollTo("#start")}>Start</li>
                         <li onClick={() => scrollTo("#area")}>O osiedlu</li>
@@ -63,11 +53,10 @@ const Header = ({ id }: Navigation) => {
                         </li>
                         <li onClick={() => scrollTo("#about")}>O nas</li>
                     </ul>
-                </NavigationWrapper>
-                <ContactButton>Kontakt</ContactButton>
+                </Navigation>
             </MenuBar>
-        </HeaderContainer>
+        </FooterContainer>
     );
 };
 
-export default Header;
+export default Footer;

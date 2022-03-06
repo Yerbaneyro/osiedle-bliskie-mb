@@ -2,6 +2,26 @@ import { createGlobalStyle } from "styled-components";
 import "@fontsource/work-sans";
 
 const GlobalStyle = createGlobalStyle`
+
+    .swiper {
+        padding-bottom: 38px !important;
+    }
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: 159px !important;
+    }
+    .swiper-pagination-bullet {
+        width: 12px !important;; 
+        height: 12px !important;;
+        border-radius: 2px !important;;
+    }
+    .swiper-pagination-bullet-active {
+        
+        background-color: #739143 !important;
+    }
+
+
+    
+
     body {
         display: block;
         font-family: "Work Sans" ;
@@ -18,11 +38,11 @@ const GlobalStyle = createGlobalStyle`
     dl, dt, dd, ol, ul, li,
     fieldset, form, label, legend,
     table, caption, tbody, tfoot, thead, tr, th, td {
-	    background: transparent;
-	    border: 0;
-	    margin: 0;
-	    padding: 0;
-	    vertical-align: baseline;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
     }
 
 

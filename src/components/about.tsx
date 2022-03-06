@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
+import { Navigation } from "../../types";
 
 //styled-components
 
@@ -44,9 +45,9 @@ const AboutText = styled.div`
     }
 `;
 
-const About = () => {
+const About = ({ id }: Navigation) => {
     return (
-        <AboutContainer>
+        <AboutContainer id={id}>
             <ImageWraper>
                 <StaticImage
                     src="../images/aboutimage.png"
