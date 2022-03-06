@@ -11,6 +11,10 @@ const FooterContainer = styled.div`
     margin-top: 150px;
     background-color: #2a4819;
     color: white;
+
+    @media (max-width: 428px) {
+        display: none;
+    }
 `;
 
 const MenuBar = styled.div`
